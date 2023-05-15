@@ -3,7 +3,8 @@ import { redirecToAuthCodeFlow,  getAccessToken, populateUI, fetchProfile } from
 
 const clientId = '5e91022d605b43d5840f0648348e9348';
 const params = new URLSearchParams(window.location.search);
-let code = params.get("code")
+let code = undefined //colocar params.get("code")
+
 
 if(!code) {
   redirecToAuthCodeFlow(clientId)
